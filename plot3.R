@@ -25,6 +25,9 @@ powerSub<-subset(power, Date == "1/2/2007" | Date == "2/2/2007")
 rm(power)
 
 ##Plot 3 - line graphs of Energy sub metering
+png(width = 480, height = 480, file = "Plot3.png")
+par(mfrow = c(1,1))
+
 with(powerSub, plot(DateTime, Sub_metering_1, type = "l", 
                     xlab = "",
                     ylab = "Energy sub metering",
